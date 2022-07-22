@@ -1,0 +1,11 @@
+{
+  "title": "11ty blog template",
+  "subtitle": "create your own blog immediately",
+  "feedUrl": "/feed.xml",
+  "url": "",
+  "author": {
+    "name": "Chambers",
+    "email": "bobhus394@gmail.com"
+  },
+  "cover": "/assets/logo.png"
+}

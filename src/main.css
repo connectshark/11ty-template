@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-green-dark: 79 180 191;
+    --color-green-light: 79 179 191;
+    --color-green: 0 131 143;
+    --color-primary: var(--color-green);
+    --color-light: var(--color-green-light);
+    --color-dark: var(--color-green-dark);
+    --header-height: 56px;
+  }
+}

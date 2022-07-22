@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" href="/index.css?v={% version %}"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.0.1/css/boxicons.min.css"/> -->
+  {% include 'components/meta-info.njk' %}
+  <title>{{ title }} | {{ metadata.title }}</title>
+
+</head>
+<body class=" font-mono min-h-screen text-stone-900">
+{% include 'components/headerWrapper.njk' %}
+<main class=" bg-gray-50">
+  <div class=" container mx-auto">
+    <h1 class=" py-20 lg:py-32  text-center text-4xl font-bold">{{ title }}</h1>
+  </div>
+  <ul class=" text-center w-full max-w-md mx-auto py-40">
+    {{ content | safe }}
+  </ul>
+</main>
+{% include 'components/footer.njk' %}
+</body>
+</html>

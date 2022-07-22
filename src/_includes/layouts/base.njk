@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" href="/index.css?v={% version %}"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.0.1/css/boxicons.min.css"/> -->
+  {% include 'components/meta-info.njk' %}
+  <title>{{ title }} | {{ metadata.title }}</title>
+
+</head>
+<body class=" font-mono min-h-screen text-stone-900">
+{% include 'components/headerWrapper.njk' %}
+<section class=" container mx-auto pt-16 px-8 pb-8 text-2xl lg:text-4xl">
+  <h2 class="text-primary font-bold">{{ metadata.title }}</h2>
+  <p class="font-bold mb-5">{{ metadata.subtitle }}</p>
+  <p class="text-base lg:text-2xl text-gray-700">Simple, powerful, and performant. Meet the modern SSG framework you've always wanted.</p>
+</section>
+<main class=" container mx-auto flex items-start justify-between flex-wrap lg:flex-nowrap">
+  <section class="w-full lg:w-2/3 p-5 grid grid-cols-1 gap-8 lg:grid-cols-2">
+    {{ content | safe }}
+  </section>
+  <aside class="w-full lg:w-1/3 p-5">
+    <iframe class=" w-full" src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2F%25E5%25B0%258F%25E8%25B3%2587%25E6%2597%258FFire%25E6%2594%25BB%25E7%2595%25A5-533313826812078&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=494098948617629" width="340" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+  </aside>
+</main>
+{% include 'components/footer.njk' %}
+</body>
+</html>

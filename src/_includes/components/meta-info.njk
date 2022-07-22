@@ -1,0 +1,19 @@
+{% if cover %}
+  {% set metaImage = cover %}
+{% endif %}
+{% if not cover %}
+  {% set metaImage = metadata.cover %}
+{% endif %}
+  <link rel="canonical" href="{{ metadata.url }}{{ page.url }}" />
+  <meta property="og:site_name" content="{{ metadata.title }}" />
+  <meta property="og:title" content="{{ title }} | {{ metadata.name }}" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="{{ metadata.url }}{{ page.url }}" />
+  <meta name="description" content="{{ description or metadata.description }}" />
+  <meta name="twitter:description" content="{{ description or metadata.description }}" />
+  <meta property="og:description" content="{{ description or metadata.description }}" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta property="og:image" content="{{ metaImage }}" />
+  <meta name="twitter:image" content="{{ metaImage }}" />
+  <meta property="og:image:alt" content="Page image for {{ title or metadata.title }}" />
+  <meta name="twitter:image:alt" content="Page image for {{ title or metadata.title }}" />
