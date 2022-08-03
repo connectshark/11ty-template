@@ -6,7 +6,6 @@
   <link rel="stylesheet" href="/index.css?v={% version %}"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
-  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.0.1/css/boxicons.min.css"/> -->
   {% include 'components/meta-info.njk' %}
   <title>{{ title }} | {{ metadata.title }}</title>
 
@@ -15,8 +14,11 @@
 {% include 'components/headerWrapper.njk' %}
 <main class=" container mx-auto flex items-start justify-between flex-wrap lg:flex-nowrap">
   <section class="w-full lg:w-2/3">
-    <article class="prose mx-auto">
-      <h1 class="text-center py-24 bg-gray-50 text-primary">{{ title }}</h1>
+    <div class="bg-gray-50 text-center py-24">
+      <h1 class="text-primary text-2xl font-bold w-5/6 mx-auto">{{ title }}</h1>
+    </div>
+    
+    <article class="prose mx-auto w-5/6 prose-a:text-primary prose-img:rounded prose-img:shadow">
       {{ content | safe }}
     </article>
   </section>

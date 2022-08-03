@@ -1,7 +1,6 @@
 ---
 title: my two post
 description: 23123241423
-layout: layouts/post.njk
 tags:
   - tech
   - foods

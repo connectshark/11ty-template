@@ -6,16 +6,19 @@ pagination:
   size: 6
   alias: post
 ---
-{%- for article in post -%}
-<article>
-  <figure class=" mb-4">
+{%- for article in post | reverse -%}
+<article class="rounded-t-2xl overflow-hidden">
+  <figure>
     <a href="{{ article.url }}">
-      <img class="w-full h-max rounded-lg shadow max-h-80 object-cover" src="https://source.unsplash.com/random" alt="{{ article.data.title }}">
+      <img class="max-h-80 w-full object-cover" src="https://source.unsplash.com/random" alt="{{ article.data.title }}">
     </a>
   </figure>
-  <h2 class=" text-xl font-bold"><a href="/tags/">{{ article.data.title }}</a></h2>
-  <p class=" text-gray-500">{{ article.data.date | postDate }}</p>
-  <p><i class='text-gray-500 items-center bx bxs-purchase-tag-alt'></i>{%- for tag in article.data.tags -%}<a href="/tags/{{ tag }}/" class="inline-block mx-2 hover:opacity-80">{{ tag }}</a>{%- endfor -%}</p>
+  <div class="p-4 border rounded-b-2xl">
+    <h2 class=" leading-loose text-xl font-bold"><a class="hover:text-primary" href="{{ article.url }}">{{ article.data.title }}</a></h2>
+    <p class=" text-gray-500">{{ article.data.date | postDate }}</p>
+    <p><i class='text-gray-500 items-center bx bxs-purchase-tag-alt'></i>{%- for tag in article.data.tags -%}<a href="/tags/{{ tag }}/" class="inline-block mx-2 hover:opacity-80 border p-1 align-middle rounded">{{ tag }}</a>{%- endfor -%}</p>
+  </div>
+  
 </article>
 {%- endfor -%}
 
