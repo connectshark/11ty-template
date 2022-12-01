@@ -16,7 +16,7 @@ layout: layouts/tag.njk
   <li class=" inline-block m-4 p-3 border border-primary">
     <a href="{{ post.url | url }}">
       <h2 class="text-xl">{{ post.data.title }}</h2>
-      <p><span class=" text-gray-500">{{ article.data.date | postDate }}</span></p>
+      <p><span class=" text-gray-500">{{ post.data.date | postDate }}</span></p>
     </a>
   </li>
 {% endfor %}
